@@ -62,7 +62,7 @@ javascript:
 		cmd() gives a link with a list of all commands
 	*/
 	function cmd(){
-		link = "http://pastebin.com/ScMuWALX";
+		link = "https://github.com/Muryoutaisuu/djmury/blob/master/commands.md";
 		API.sendChat(link);
 	}
 	
