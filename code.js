@@ -1,7 +1,4 @@
-/*	-- Code --	*/
-
 javascript:
-
 	/*	Immediately conducted code	*/
 	alert("Firefox: ctrl + shift + K\nweitere Befehle / more commands: /cmd");
 	
@@ -18,10 +15,12 @@ javascript:
 				alert("Hey! Let's party hard!");
 				break;
 			case "/cmd":
-				cmd();
+				text = cmd();
+				API.sendChat(text);
 				break;
 			case "/halloween":
-				halloween();
+				text = halloween();
+				API.sendChat(text);
 				break;
 			default:
 				break;
@@ -43,11 +42,12 @@ javascript:
 	/*	cmd() gives a link with a list of all commands	*/
 	function cmd(){
 		link = "https://github.com/Muryoutaisuu/djmury/blob/master/commands.md";
-		API.sendChat(link);
+		return link;
 	}
 	
 	/*	Instruction for halloween avatars	*/
 	function halloween(){
-		API.sendChat("http://pastebin.com/VN1W4pAd");
+		link = "http://pastebin.com/VN1W4pAd";
+		return link;
 	}
 ;
