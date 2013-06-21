@@ -6,7 +6,7 @@ called by /cmd
 *give all commands*
 
 /halloween
-*instructino for halloween avatars*
+*instruction for halloween avatars*
 
 /hello
 *alert Hello!*
