@@ -13,3 +13,5 @@ Chat Commands
 Console Commands
 -
 cmd() | *returns a link with all possible commands (this page)*
+
+halloween() | *returns a link with instructions for halloween avatars*
