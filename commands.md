@@ -4,14 +4,14 @@ Commands
 
 Chat Commands
 -
-/cmd | *give all commands*
+/cmd || *give all commands*
 
-/helloween | *instruction for helloween avatars*
+/helloween || *instruction for helloween avatars*
 
-/hello | *alert Hello!*
+/hello || *alert Hello!*
 
 Console Commands
 -
-cmd() | *returns a link with all possible commands (this page)*
+cmd() || *returns a link with all possible commands (this page)*
 
-helloween() | *returns a link with instructions for helloween avatars*
+helloween() || *returns a link with instructions for helloween avatars*
