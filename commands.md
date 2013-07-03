@@ -1,12 +1,15 @@
+called by /cmd
 Commands
 =
-called by /cmd
 
-/cmd
-*give all commands*
+Chat Commands
+-
+/cmd | *give all commands*
 
-/halloween
-*instruction for halloween avatars*
+/halloween | *instruction for halloween avatars*
 
-/hello
-*alert Hello!*
+/hello | *alert Hello!*
+
+Console Commands
+-
+cmd() | *returns a link with all possible commands (this page)*
