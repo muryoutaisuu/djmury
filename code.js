@@ -14,7 +14,7 @@ javascript:
 	/*	initializing global variables	*/
 	var gl_roomscore = API.getRoomScore();
 	var gl_autowoot = true;
-	console.info(gl_autowoot);
+	var gl_sendstatistics = false;
 	
 	/*	chat()-function loaded on chatEvent	*/
 	function chat(data)
@@ -40,7 +40,9 @@ javascript:
 	/*	nextDJ()-function loaded on DJChange-Event	*/
 	function nextDJ(obj){
 		string = sendScore();
-		/* API.sendChat(string); //*/
+		if (window.gl_sendstatistics){
+			API.sendChat(string);
+		}
 		console.info(string);
 		window.gl_roomscore = API.getRoomScore();
 		if (window.gl_autowoot){
@@ -86,6 +88,16 @@ javascript:
 			console.info("You are wooting now.");
 		} else {
 			console.info("You aren't wooting anymore.");
+		}
+	}
+	
+	/*	switch sendstatistics into chat	*/
+	function switchSendstatistics(){
+		window.gl_sendstatistics = !window.gl_sendstatistics;
+		if (window.gl_sendstatistics){
+			console.info("You are now sending statistics into chat.");
+		} else {
+			console.info("You aren't sending any statistics to chat anymore.");
 		}
 	}
 ;
