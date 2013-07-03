@@ -6,7 +6,7 @@ Chat Commands
 -
 /cmd | *give all commands*
 
-/halloween | *instruction for halloween avatars*
+/helloween | *instruction for helloween avatars*
 
 /hello | *alert Hello!*
 
