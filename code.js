@@ -19,6 +19,7 @@ javascript:
 	/*	chat()-function loaded on chatEvent	*/
 	function chat(data)
 	{
+		/*	checks, whether the message is a known command	*/
 		var mes = data.message;
 		switch(mes){
 			case "/hello":
@@ -40,11 +41,13 @@ javascript:
 	/*	nextDJ()-function loaded on DJChange-Event	*/
 	function nextDJ(obj){
 		string = sendScore();
+		/*	if okay, sends statistics to chat	*/
 		if (window.gl_sendstatistics){
 			API.sendChat(string);
 		}
 		console.info(string);
 		window.gl_roomscore = API.getRoomScore();
+		/*	if okay, does autowoot	*/
 		if (window.gl_autowoot){
 			$('#button-vote-positive').click();
 		}
@@ -72,6 +75,7 @@ javascript:
 		return string;
 	}
 	
+	/*	scoreUpdate(obj) is called, whenever the score in the room changes. The global variable gl_roomscore is updated	*/
 	function scoreUpdate(obj){
 		window.gl_roomscore = obj;
 	}
