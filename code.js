@@ -1,6 +1,7 @@
 javascript:
 	/*	Immediately conducted code	*/
 	alert("Firefox: ctrl + shift + K\nweitere Befehle / more commands: /cmd");
+	$('#button-vote-positive').click();
 	
 	/*	Activated EventListeners	*/
 	/*	chat()-function loaded on chatevent	*/
@@ -12,6 +13,8 @@ javascript:
 	
 	/*	initializing global variables	*/
 	var gl_roomscore = API.getRoomScore();
+	var gl_autowoot = true;
+	console.info(gl_autowoot);
 	
 	/*	chat()-function loaded on chatEvent	*/
 	function chat(data)
@@ -37,9 +40,12 @@ javascript:
 	/*	nextDJ()-function loaded on DJChange-Event	*/
 	function nextDJ(obj){
 		string = sendScore();
-		API.sendChat(string);
-		console.log(string);
+		/* API.sendChat(string); //*/
+		console.info(string);
 		window.gl_roomscore = API.getRoomScore();
+		if (window.gl_autowoot){
+			$('#button-vote-positive').click();
+		}
 	}
 	
 	/*	cmd() gives a link with a list of all commands	*/
@@ -54,7 +60,7 @@ javascript:
 		return link;
 	}
 	
-	/*	sends score of last song	*/
+	/*	returns score of last song as a string	*/
 	function sendScore(){
 		var x = window.gl_roomscore;
 		var pos = x.positive;
@@ -71,5 +77,15 @@ javascript:
 	/*	gets score from current song	*/
 	function getScore(){
 		return API.getRoomScore();
+	}
+	
+	/*	switch autowoot	*/
+	function switchAutowoot(){
+		window.gl_autowoot = !window.gl_autowoot;
+		if (window.gl_autowoot){
+			console.info("You are wooting now.");
+		} else {
+			console.info("You aren't wooting anymore.");
+		}
 	}
 ;
