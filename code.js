@@ -1,6 +1,6 @@
 javascript:
 	/*	Immediately conducted code	*/
-	alert("Firefox: ctrl + shift + K\nweitere Befehle / more commands: /cmd");
+	alert("Firefox: ctrl + shift + K\nweitere Befehle / more commands: /cmd\nPlease visit github.com/Muryoutaisuu/djmury for mor information");
 	$('#button-vote-positive').click();
 	
 	/*	Activated EventListeners	*/
@@ -86,6 +86,7 @@ javascript:
 		window.gl_autowoot = !window.gl_autowoot;
 		if (window.gl_autowoot){
 			console.info("You are wooting now.");
+			$('#button-vote-positive').click();
 		} else {
 			console.info("You aren't wooting anymore.");
 		}
