@@ -32,18 +32,6 @@ javascript:
 			default:
 				break;
 		}
-		/* given data
-		data.type
-		// "message", "emote", "moderation", "system"
-		data.from
-		// the username of the person
-		data.fromID
-		// the user id of the person
-		data.message
-		// the chat message
-		data.language
-		// the two character code of the incoming language
-		//*/
 	}
 	
 	/*	nextDJ()-function loaded on DJChange-Event	*/
@@ -52,17 +40,6 @@ javascript:
 		API.sendChat(string);
 		console.log(string);
 		window.gl_roomscore = API.getRoomScore();
-	/*
-		if (obj == null) return;
-		var str = "";
-		var currentDJ = obj.dj;
-		str += currentDJ.username;
-		var total = currentDJ.djPoints + currentDJ.listenerPoints + currentDJ.curatorPoints;
-		str += " points: " + total;
-		str += ", fans: " + currentDJ.fans;
-		str += " || " + obj.media.author + " - " + obj.media.title;
-		alert(str);
-	*/
 	}
 	
 	/*	cmd() gives a link with a list of all commands	*/
