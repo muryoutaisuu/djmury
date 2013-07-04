@@ -8,6 +8,9 @@ It doesn't do much yet, but I want to work on it as I have time.
 ## Funcionalities
 This script can do some little things, e.g. autowoot ;-). It's basically a console-script, so don't expect some high quality buttons, which will change your behaviour on click. Nevertheless, I'm thinking about some links to activate some functions, e.g. autowoot on/off.
 
+### Cookies
+In the current version, this bot doesn't create and use any cookies. So it isn't possible to save actions like autowoot etc. to the next session. So please stay calm and use your commando line :-)
+
 ## Ideas
 I'm open to all kind of Ideas. However, I'm not the best at JavaScripting :-).
 
