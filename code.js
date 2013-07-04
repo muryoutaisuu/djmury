@@ -1,9 +1,13 @@
 javascript:
-	/*	Immediately conducted code	*/
+	/**	Immediately conducted code	*/
+	
+	/*	this line will do an alert, in which the most important informations are given to the users	*/
 	alert("Firefox: ctrl + shift + K\nweitere Befehle / more commands: /cmd\nPlease visit github.com/Muryoutaisuu/djmury for mor information");
+	/*	this line will automatically autowoot the current song	*/
 	$('#button-vote-positive').click();
 	
-	/*	Activated EventListeners	*/
+	/**	Activated EventListeners	*/
+	
 	/*	chat()-function loaded on chatevent	*/
 	API.addEventListener(API.CHAT, chat);
 	/*	nextDJ()-function loaded on DJChange-Event	*/
@@ -11,55 +15,65 @@ javascript:
 	/*	scoreUpdate()-function loaded on Score-Update-Event	*/
 	API.addEventListener(API.ROOM_SCORE_UPDATE, scoreUpdate);
 	
-	/*	initializing global variables	*/
-	var gl_roomscore = API.getRoomScore();
-	var gl_autowoot = true;
-	var gl_sendstatistics = false;
+	/**	initializing global variables	*/
 	
-	/*	chat()-function loaded on chatEvent	*/
+	var gl_roomscore = API.getRoomScore();	/*	use for saving roomscore to display it after a new song begins	*/
+	var gl_autowoot = true;	/*	is used for checking whether the bot should autowoot or not	*/
+	var gl_sendstatistics = false;	/*	ist used for checking whether the bot should send the roomscore/statistics to chat and make them public	*/
+	
+	/**	functions	*/
+
+	/*	chat()-function loaded on chatevent
+		this function is always triggered, when the chatevent ist triggered, which means always when somebody writes something	*/
 	function chat(data)
 	{
-		/*	checks, whether the message is a known command	*/
+		/*	saves the message into the variable 'mes'	*/
 		var mes = data.message;
+		/*	checks, whether the message is a known command and executes corresponding command	*/
 		switch(mes){
+			/*	was just used for testing, but never deleted, why should I? :-)	*/
 			case "/hello":
 				alert("Hey! Let's party hard!");
 				break;
+			/*	will display all known/user-oriented functions and commands listed on a link	*/
 			case "/cmd":
 				text = cmd();
 				API.sendChat(text);
 				break;
+			/*	will display a link with instructions for helloween avatars	*/
 			case "/helloween":
 				text = helloween();
 				API.sendChat(text);
 				break;
+			/*	won't do anything, if the command is unknown	*/
 			default:
 				break;
 		}
 	}
 	
-	/*	nextDJ()-function loaded on DJChange-Event	*/
+	/*	nextDJ()-function loaded on DJChange-Event
+		this function is always triggered, when the djAdvance-event is triggered, normally when dj changes, usually after a song	*/
 	function nextDJ(obj){
 		string = sendScore();
-		/*	if okay, sends statistics to chat	*/
+		/*	if gl_sendstatistics is true, it will send statistics to chat and make them public	*/
 		if (window.gl_sendstatistics){
 			API.sendChat(string);
 		}
-		console.info(string);
-		window.gl_roomscore = API.getRoomScore();
-		/*	if okay, does autowoot	*/
+		console.info(string);	/*	sends the scoredata as a string to the info-console of the webbrowser	*/
+		window.gl_roomscore = API.getRoomScore();	/*	resets the roomscore, actually not really needed	*/
+		/*	if gl_autowoot is true, it will autowoot the new song	*/
 		if (window.gl_autowoot){
 			$('#button-vote-positive').click();
 		}
 	}
 	
-	/*	cmd() gives a link with a list of all commands	*/
+	/*	cmd() returns a link with a list of all commands	*/
 	function cmd(){
 		link = "https://github.com/Muryoutaisuu/djmury/blob/master/commands.md";
 		return link;
 	}
 	
-	/*	Instruction for helloween avatars	*/
+	/*	returns a link with nstruction for helloween avatars	*/
 	function helloween(){
 		link = "http://pastebin.com/VN1W4pAd";
 		return link;
@@ -75,12 +89,13 @@ javascript:
 		return string;
 	}
 	
-	/*	scoreUpdate(obj) is called, whenever the score in the room changes. The global variable gl_roomscore is updated	*/
+	/*	scoreUpdate(obj) is called, whenever the score in the room changes.
+		The global variable gl_roomscore is updated	*/
 	function scoreUpdate(obj){
 		window.gl_roomscore = obj;
 	}
 	
-	/*	gets score from current song	*/
+	/*	gets score from current song, actually not needed or used	*/
 	function getScore(){
 		return API.getRoomScore();
 	}
