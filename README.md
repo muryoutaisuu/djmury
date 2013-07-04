@@ -19,3 +19,8 @@ One of my ideas is it to create a working Keylistener. I already tried some thin
 
 ## Inspiration
 The first bot I used was at the same time the bot, I used to get some information about API and functions. Here it is: *https://github.com/ConnerGDavis/Plugbot*
+
+## By the way
+I am **not** native! So please don't flame me because of my bad english. Nevertheless, if you want to help me, just write an E-Mail :-).
+
+Your loveliest, Muryoutaisuu ♥
