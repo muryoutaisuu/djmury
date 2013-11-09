@@ -4,7 +4,7 @@ javascript:
 	/*	this line will do an alert, in which the most important informations are given to the users	*/
 	alert("Firefox: ctrl + shift + K\nweitere Befehle / more commands: /cmd\nPlease visit github.com/Muryoutaisuu/djmury for mor information");
 	/*	this line will automatically autowoot the current song	*/
-	$('#button-vote-positive').click();
+	$('#woot').click();
 	
 	/**	Activated EventListeners	*/
 	
@@ -63,7 +63,7 @@ javascript:
 		window.gl_roomscore = API.getRoomScore();	/*	resets the roomscore, actually not really needed	*/
 		/*	if gl_autowoot is true, it will autowoot the new song	*/
 		if (window.gl_autowoot){
-			$('#button-vote-positive').click();
+			$('#woot').click();
 		}
 	}
 	
@@ -105,7 +105,7 @@ javascript:
 		window.gl_autowoot = !window.gl_autowoot;
 		if (window.gl_autowoot){
 			console.info("You are wooting now.");
-			$('#button-vote-positive').click();
+			$('#woot').click();
 		} else {
 			console.info("You aren't wooting anymore.");
 		}
