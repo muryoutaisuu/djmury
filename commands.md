@@ -1,3 +1,4 @@
+test!
 called by /cmd
 Commands
 =
