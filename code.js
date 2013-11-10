@@ -4,6 +4,7 @@
 	alert("Firefox: ctrl + shift + K\nweitere Befehle / more commands: /cmd\nPlease visit github.com/Muryoutaisuu/djmury for mor information");
 	/*	this line will automatically autowoot the current song	*/
 	$('#woot').click();
+	switchAutowoot();
 	
 	/**	Activated EventListeners	*/
 	
