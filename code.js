@@ -1,4 +1,3 @@
-javascript:
 	/**	Immediately conducted code	*/
 	
 	/*	this line will do an alert, in which the most important informations are given to the users	*/
@@ -120,4 +119,3 @@ javascript:
 			console.info("You aren't sending any statistics to chat anymore.");
 		}
 	}
-;
