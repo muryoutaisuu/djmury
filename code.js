@@ -18,8 +18,8 @@
 	/**	initializing global variables	*/
 	
 	var gl_roomscore = API.getRoomScore();	/*	use for saving roomscore to display it after a new song begins	*/
-	var gl_autowoot = true;	/*	is used for checking whether the bot should autowoot or not	*/
-	var gl_sendstatistics = false;	/*	ist used for checking whether the bot should send the roomscore/statistics to chat and make them public	*/
+	var gl_autowoot = new boolean(true);	/*	is used for checking whether the bot should autowoot or not	*/
+	var gl_sendstatistics = new boolean(false);	/*	ist used for checking whether the bot should send the roomscore/statistics to chat and make them public	*/
 	
 	/**	functions	*/
 
