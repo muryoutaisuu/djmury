@@ -7,12 +7,7 @@ $('#woot').click();
 
 /**	Activated EventListeners	*/
 
-/*	chat()-function loaded on chatevent	*/
-API.addEventListener(API.CHAT, chat);
-/*	nextDJ()-function loaded on DJChange-Event	*/
-API.addEventListener(API.DJ_ADVANCE, nextDJ);
-/*	scoreUpdate()-function loaded on Score-Update-Event	*/
-API.addEventListener(API.ROOM_SCORE_UPDATE, scoreUpdate);
+
 
 /**	initializing global variables	*/
 
@@ -21,6 +16,13 @@ function init(){
 	window.gl_roomscore = API.getRoomScore();	/*	use for saving roomscore to display it after a new song begins	*/
 	window.gl_autowoot = true;	/*	is used for checking whether the bot should autowoot or not	*/
 	window.gl_sendstatistics = false;	/*	ist used for checking whether the bot should send the roomscore/statistics to chat and make them public	*/	
+	
+	/*	chat()-function loaded on chatevent	*/
+	API.addEventListener(API.CHAT, chat);
+	/*	nextDJ()-function loaded on DJChange-Event	*/
+	API.addEventListener(API.DJ_ADVANCE, nextDJ);
+	/*	scoreUpdate()-function loaded on Score-Update-Event	*/
+	API.addEventListener(API.ROOM_SCORE_UPDATE, scoreUpdate);
 }
 
 
