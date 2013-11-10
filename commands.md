@@ -1,4 +1,3 @@
-test!
 called by /cmd
 Commands
 =
@@ -22,3 +21,5 @@ helloween() || *returns a link with instructions for helloween avatars*
 sendScore() || *returns a string with statistics from current song. Used for sendChat()*
 
 switchAutowoot() || *toggles autowoot*
+
+table | zsnlr | laksdf
