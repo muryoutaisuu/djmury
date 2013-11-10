@@ -4,7 +4,7 @@
 	alert("Firefox: ctrl + shift + K\nweitere Befehle / more commands: /cmd\nPlease visit github.com/Muryoutaisuu/djmury for mor information");
 	/*	this line will automatically autowoot the current song	*/
 	$('#woot').click();
-	switchAutowoot();
+	/*switchAutowoot();*/
 	
 	/**	Activated EventListeners	*/
 	
@@ -18,7 +18,7 @@
 	/**	initializing global variables	*/
 	
 	var gl_roomscore = API.getRoomScore();	/*	use for saving roomscore to display it after a new song begins	*/
-	/* var gl_autowoot = true;*/	/*	is used for checking whether the bot should autowoot or not	*/
+	window.gl_autowoot = true;	/*	is used for checking whether the bot should autowoot or not	*/
 	var gl_sendstatistics = false;	/*	ist used for checking whether the bot should send the roomscore/statistics to chat and make them public	*/
 	
 	/**	functions	*/
